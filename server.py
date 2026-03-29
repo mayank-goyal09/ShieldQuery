@@ -84,12 +84,12 @@ async def system_status():
 # ──────────────────────────────────────────────────────────────
 # Serve static frontend
 # ──────────────────────────────────────────────────────────────
-app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/docs", StaticFiles(directory="docs"), name="docs")
 
 
 @app.get("/", response_class=HTMLResponse)
 async def serve_frontend():
-    with open("static/index.html", "r", encoding="utf-8") as f:
+    with open("docs/index.html", "r", encoding="utf-8") as f:
         return HTMLResponse(content=f.read())
 
 
