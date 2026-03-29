@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Intelligence — AI-Powered Document Analyzer</title>
+    <meta name="description" content="Upload any document — assignments, contracts, NDAs, policies — and get instant AI-powered analysis and answers.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔍</text></svg>">
+    <link rel="stylesheet" href="/docs/style.css">
+</head>
+<body>
+    <!-- ═══════════════ Background Particles ═══════════════ -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- ═══════════════ Navigation ═══════════════ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-brand">
+            <span class="nav-logo">◆</span>
+            <span class="nav-title">DocIntel</span>
+        </div>
+        <div class="nav-links">
+            <a href="#hero" class="nav-link active">Home</a>
+            <a href="#upload-section" class="nav-link">Upload</a>
+            <a href="#chat-section" class="nav-link">Analyze</a>
+        </div>
+        <div class="nav-status" id="nav-status">
+            <span class="status-dot" id="status-dot"></span>
+            <span class="status-text" id="status-text">Initializing...</span>
+        </div>
+    </nav>
+
+    <!-- ═══════════════ Hero Section ═══════════════ -->
+    <section class="hero" id="hero">
+        <div class="hero-content reveal">
+            <div class="hero-badge">AI-Powered Analysis</div>
+            <h1 class="hero-title">
+                Document<br>
+                <span class="gradient-text">Intelligence</span>
+            </h1>
+            <p class="hero-subtitle">
+                Upload any document — assignments, contracts, NDAs, company policies, 
+                reports — and get instant AI-powered insights, summaries, and answers.
+            </p>
+            <div class="hero-actions">
+                <a href="#upload-section" class="btn btn-primary">
+                    <span class="btn-icon">↑</span>
+                    Upload Document
+                </a>
+                <a href="#features" class="btn btn-ghost">
+                    Learn More
+                    <span class="btn-arrow">→</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-number" id="stat-docs">0</span>
+                    <span class="hero-stat-label">Documents</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number" id="stat-pages">0</span>
+                    <span class="hero-stat-label">Pages Analyzed</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number" id="stat-queries">0</span>
+                    <span class="hero-stat-label">Queries Answered</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-glow"></div>
+    </section>
+
+    <!-- ═══════════════ Features Section ═══════════════ -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title reveal">
+                Why <span class="gradient-text">DocIntel</span>?
+            </h2>
+            <div class="features-grid">
+                <div class="feature-card reveal" style="--delay: 0.1s">
+                    <div class="feature-icon">📑</div>
+                    <h3>Any Document</h3>
+                    <p>Assignments, contracts, NDAs, policies, reports, memos — upload anything and get instant analysis.</p>
+                </div>
+                <div class="feature-card reveal" style="--delay: 0.2s">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Optimized Latency</h3>
+                    <p>Pre-loaded AI models and cached vector stores deliver blazing-fast responses on every query.</p>
+                </div>
+                <div class="feature-card reveal" style="--delay: 0.3s">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>No Hallucination</h3>
+                    <p>Answers are grounded 100% in your uploaded documents. The AI never fabricates information.</p>
+                </div>
+                <div class="feature-card reveal" style="--delay: 0.4s">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Smart Insights</h3>
+                    <p>Key topics and sections are automatically detected and displayed after every upload.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ Upload Section ═══════════════ -->
+    <section class="upload-section" id="upload-section">
+        <div class="container">
+            <h2 class="section-title reveal">
+                Upload Your <span class="gradient-text">Document</span>
+            </h2>
+            <p class="section-subtitle reveal">Drag and drop or click to browse — PDF documents up to 50MB</p>
+
+            <div class="upload-area reveal" id="upload-area">
+                <div class="upload-dropzone" id="dropzone">
+                    <input type="file" id="file-input" accept=".pdf" hidden>
+                    <div class="dropzone-content" id="dropzone-content">
+                        <div class="dropzone-icon">
+                            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="17 8 12 3 7 8"/>
+                                <line x1="12" y1="3" x2="12" y2="15"/>
+                            </svg>
+                        </div>
+                        <h3 class="dropzone-title">Drop your document here</h3>
+                        <p class="dropzone-subtitle">or <span class="dropzone-browse">browse files</span></p>
+                        <p class="dropzone-formats">Supports: PDF (text-based)</p>
+                    </div>
+                    <!-- Processing state -->
+                    <div class="upload-progress" id="upload-progress" style="display: none;">
+                        <div class="progress-spinner"></div>
+                        <p class="progress-text" id="progress-text">Analyzing document...</p>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="progress-bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Insights Panel (appears after upload) -->
+            <div class="insights-panel" id="insights-panel" style="display: none;">
+                <div class="insights-header">
+                    <h3>📊 Document Analysis Complete</h3>
+                    <div class="insights-meta" id="insights-meta"></div>
+                </div>
+                <div class="insights-grid" id="insights-grid"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ Chat Section ═══════════════ -->
+    <section class="chat-section" id="chat-section">
+        <div class="container">
+            <h2 class="section-title reveal">
+                Ask <span class="gradient-text">Anything</span>
+            </h2>
+            <p class="section-subtitle reveal">Chat with your documents — get accurate, grounded answers instantly</p>
+
+            <div class="chat-container reveal">
+                <div class="chat-messages" id="chat-messages">
+                    <!-- Welcome message -->
+                    <div class="chat-welcome" id="chat-welcome">
+                        <div class="welcome-icon">🤖</div>
+                        <h3>Document Analyst Ready</h3>
+                        <p>Upload a document above and ask me anything about it.<br>I'll provide accurate, sourced answers.</p>
+                        <div class="welcome-suggestions" id="welcome-suggestions">
+                            <button class="suggestion-chip" onclick="askSuggestion(this)">Summarize the document</button>
+                            <button class="suggestion-chip" onclick="askSuggestion(this)">What are the key points?</button>
+                            <button class="suggestion-chip" onclick="askSuggestion(this)">List all important dates or deadlines</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-input-area">
+                    <div class="chat-input-wrapper" id="chat-input-wrapper">
+                        <textarea 
+                            id="chat-input" 
+                            placeholder="Ask anything about your uploaded documents..."
+                            rows="1"
+                            maxlength="2000"
+                        ></textarea>
+                        <button class="send-btn" id="send-btn" onclick="sendMessage()" disabled>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="22" y1="2" x2="11" y2="13"/>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chat-footer">
+                        <span class="response-time" id="response-time"></span>
+                        <span class="char-count" id="char-count">0 / 2000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ Footer ═══════════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="nav-logo">◆</span>
+                    <span>DocIntel</span>
+                </div>
+                <p class="footer-text">Document Intelligence v2.0 — Powered by LLaMA 3.3</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/docs/script.js"></script>
+</body>
+</html>
