@@ -1,3 +1,12 @@
+---
+title: DocIntel
+emoji: 🔍
+colorFrom: indigo
+colorTo: purple
+sdk: docker
+pinned: false
+---
+
 <div align="center">
 
 # 🔍 DocIntel — Private-First Document RAG
@@ -12,10 +21,17 @@
 
 <br/>
 
-[![🚀 Demo Experience](https://img.shields.io/badge/🚀_DEMO_EXPERIENCE-DocIntel-6c5ce7?style=for-the-badge&labelColor=0f1117)](https://github.com/mayank-goyal09/project-55-private-hr-rag)
-[![Data Sovereignty](https://img.shields.io/badge/🛡️_DATA_SOVEREIGNTY-100%25-success?style=for-the-badge)](https://github.com/mayank-goyal09/project-55-private-hr-rag)
+[![Live Deployment](https://img.shields.io/badge/🚀_LIVE_DEPLOYMENT-DOC_INTEL-FF4B4B?style=for-the-badge&labelColor=0f1117&logo=vercel&logoColor=white)](https://doc-intel-six.vercel.app/)
+[![Backend Status](https://img.shields.io/badge/🛠️_BACKEND_API-HUGGINGFACE-purple?style=for-the-badge&labelColor=0f1117&logo=huggingface&logoColor=white)](https://huggingface.co/spaces/mayankg09/DocIntel)
+
+> [!IMPORTANT]
+> ### 🌎 **Experience the Intelligence in Real-Time**
+> Access the fully deployed version of **DocIntel** here: [**https://doc-intel-six.vercel.app/**](https://doc-intel-six.vercel.app/)
+> 
+> *Note: This frontend is hosted on Vercel and communicates directly with our Hugging Face persistent backend API for a seamless experience.*
 
 <br/>
+
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:6c5ce7,100:a29bfe&height=200&section=header&text=Secure%20Document%20Intelligence&fontSize=60&animation=fadeIn&fontColor=ffffff&width=1000" width="1000" alt="DocIntel Banner"/>
 
