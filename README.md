@@ -111,3 +111,30 @@ graph TD
 ```
 
 ---
+## 🚧 **DIFFICULTIES WE FACED (AND SOLVED)**
+
+### 1. 🏗️ **Semantic Context Loss**
+Standard RAG pipelines treat text as a flat stream, losing the hierarchy of document headers and titles.
+> **Solution**: We built a custom **Layout-Aware PDF Parser**. By inspecting font sizes and weights in real-time, we inject markers like `[TITLE]` and `[HEADING]` directly into the text chunks. This allows the LLM to understand *exactly* where a piece of info sits in the document hierarchy.
+
+### 2. 🧊 **The "Cold Start" Latency Problem**
+Loading heavy transformer models for embeddings and initiating LLM clients on every request caused 3-5 second delays.
+> **Solution**: Implemented a **Singleton Model Cache**. Heavy weights are loaded ONCE at server startup (`lifespan` event) and reused across all requests, reducing per-query latency to milliseconds.
+
+### 3. 🤥 **LLM Hallucinations**
+AI models tend to "fill the gaps" when they can't find specific answers in the documentation.
+> **Solution**: Tight prompt engineering with strict "Answer ONLY from context" rules. We implemented a fallback system that detects low-confidence retrieval and provides a user-friendly "Information not found" response instead of guessing.
+
+---
+
+## 🎨 **PREMIUM USER EXPERIENCE**
+
+<div align="center">
+
+### ✨ **Experience the Future of Document Analysis**
+
+</div>
+
+<table>
+<tr>
+<td width="50%">
