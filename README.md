@@ -11,3 +11,39 @@
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 
 <br/>
+
+[![🚀 Demo Experience](https://img.shields.io/badge/🚀_DEMO_EXPERIENCE-DocIntel-6c5ce7?style=for-the-badge&labelColor=0f1117)](https://github.com/mayank-goyal09/project-55-private-hr-rag)
+[![Data Sovereignty](https://img.shields.io/badge/🛡️_DATA_SOVEREIGNTY-100%25-success?style=for-the-badge)](https://github.com/mayank-goyal09/project-55-private-hr-rag)
+
+<br/>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:6c5ce7,100:a29bfe&height=200&section=header&text=Secure%20Document%20Intelligence&fontSize=70&animation=fadeIn&fontColor=ffffff" width="1000" alt="DocIntel Banner"/>
+
+<br/>
+
+### 🧠 **Bridging the gap between static local documentation and generative AI intelligence** 
+
+### **Knowledge-Vault Architecture → Hallucination-Free Responses** 🛡️
+
+</div>
+
+---
+
+## ⚡ **PROJECT AT A GLANCE**
+
+<table>
+<tr>
+<td width="55%">
+
+### 🎯 **What We Have Done**
+
+DocIntel is a high-performance **Private-First Retrieval-Augmented Generation (RAG)** system designed for organizations that demand 100% data sovereignty. It transforms sensitive internal datasets—contracts, NDAs, policies, and reports—into searchable, interactive knowledge repositories.
+
+**Key Technical Achievements:**
+- 🛡️ **No-Leak Architecture**: Local embeddings ensure sensitive data never touches the cloud during vectorspace creation.
+- 📐 **Layout-Aware Parsing**: Custom PyMuPDF engine that detects formatting (Titles, Headings, Bold) to inject structural markers into the knowledge graph.
+- ⚡ **Lightning Fast**: Blazing-fast inference using **Groq API** with Llama-3.3-70B.
+- 🎨 **Premium UI**: A glassmorphism-inspired dark interface with real-time insight generation.
+
+</td>
+<td width="45%">
