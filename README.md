@@ -47,3 +47,22 @@ DocIntel is a high-performance **Private-First Retrieval-Augmented Generation (R
 
 </td>
 <td width="45%">
+
+### ✨ **System Highlights**
+
+| Feature | Technology |
+|---------|------------|
+| 🧠 **LLM Engine** | Llama-3.3-70B (Groq) |
+| 🗄️ **Vector DB** | FAISS |
+| 🔢 **Embeddings** | HuggingFace (MiniLM-L6) |
+| 📄 **PDF Parser** | PyMuPDF (fitz) |
+| ⚡ **Latency** | <500ms Search |
+| 🎨 **Frontend** | Streamlit + Custom CSS |
+| 🛡️ **Privacy** | Local Vector Storage |
+| 🔍 **Insights** | Automatic Topic Detection |
+
+</td>
+</tr>
+</table>
+
+---
