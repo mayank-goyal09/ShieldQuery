@@ -230,7 +230,7 @@ async function handleFile(file) {
         const formData = new FormData();
         formData.append('file', file);
 
-        const res = await fetch('/api/upload', {
+        const res = await fetch('https://mayankg09-docintel.hf.space/api/upload', {
             method: 'POST',
             body: formData,
         });
@@ -360,7 +360,7 @@ async function sendMessage() {
         const formData = new FormData();
         formData.append('query', query);
 
-        const res = await fetch('/api/query', {
+        const res = await fetch('https://mayankg09-docintel.hf.space/api/query', {
             method: 'POST',
             body: formData,
         });
@@ -468,7 +468,7 @@ function removeTypingIndicator(id) {
 
 async function checkSystemStatus() {
     try {
-        const res = await fetch('/api/status');
+        const res = await fetch('https://mayankg09-docintel.hf.space/api/status');
         const data = await res.json();
         updateSystemStatus(data.documents_loaded);
         if (data.documents_loaded) {
