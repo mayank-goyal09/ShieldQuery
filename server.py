@@ -2,7 +2,7 @@ import os
 import uvicorn
 from fastapi import FastAPI, UploadFile, File, Form
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi.responses import HTMLResponse, JSONResponse, Response
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 
@@ -85,13 +85,22 @@ async def system_status():
 # Serve static frontend (supports both 'static/' and 'docs/')
 # ──────────────────────────────────────────────────────────────
 STATIC_DIR = "static" if os.path.isdir("static") else "docs"
-app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
-
-
 @app.get("/", response_class=HTMLResponse)
 async def serve_frontend():
     with open(os.path.join(STATIC_DIR, "index.html"), "r", encoding="utf-8") as f:
         return HTMLResponse(content=f.read())
+
+
+@app.get("/style.css")
+async def serve_css():
+    with open(os.path.join(STATIC_DIR, "style.css"), "r", encoding="utf-8") as f:
+        return Response(content=f.read(), media_type="text/css")
+
+
+@app.get("/script.js")
+async def serve_js():
+    with open(os.path.join(STATIC_DIR, "script.js"), "r", encoding="utf-8") as f:
+        return Response(content=f.read(), media_type="application/javascript")
 
 
 # ──────────────────────────────────────────────────────────────
