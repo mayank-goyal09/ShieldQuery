@@ -82,19 +82,20 @@ async def system_status():
 
 
 # ──────────────────────────────────────────────────────────────
-# Serve static frontend
+# Serve static frontend (supports both 'static/' and 'docs/')
 # ──────────────────────────────────────────────────────────────
-app.mount("/docs", StaticFiles(directory="docs"), name="docs")
+STATIC_DIR = "static" if os.path.isdir("static") else "docs"
+app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 
 
 @app.get("/", response_class=HTMLResponse)
 async def serve_frontend():
-    with open("docs/index.html", "r", encoding="utf-8") as f:
+    with open(os.path.join(STATIC_DIR, "index.html"), "r", encoding="utf-8") as f:
         return HTMLResponse(content=f.read())
 
 
 # ──────────────────────────────────────────────────────────────
-# Run
+# Run — port 7860 for Hugging Face Spaces
 # ──────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    uvicorn.run("server:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("server:app", host="0.0.0.0", port=7860, reload=True)
