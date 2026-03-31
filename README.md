@@ -2,7 +2,7 @@
 
 # 🔍 DocIntel — Private-First Document RAG
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Outfit&weight=700&size=32&duration=3500&pause=1000&color=6C5CE7&center=true&vCenter=true&multiline=true&width=950&height=170&lines=Private-First+Retrieval-Augmented+Generation+🔒;Contextually+Grounded+AI+Intelligence;FAISS+Vector+Search+%7C+Llama-3.3-70B+%7C+PyMuPDF)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Outfit&weight=700&size=30&duration=3500&pause=1000&color=6C5CE7&center=true&vCenter=true&multiline=true&width=1000&height=170&lines=Private-First+Retrieval-Augmented+Generation+🔒;Contextually+Grounded+AI+Intelligence;FAISS+Vector+Search+%7C+Llama-3.3-70B+%7C+PyMuPDF)](https://git.io/typing-svg)
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
@@ -17,7 +17,7 @@
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:6c5ce7,100:a29bfe&height=200&section=header&text=Secure%20Document%20Intelligence&fontSize=70&animation=fadeIn&fontColor=ffffff" width="1000" alt="DocIntel Banner"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:6c5ce7,100:a29bfe&height=200&section=header&text=Secure%20Document%20Intelligence&fontSize=60&animation=fadeIn&fontColor=ffffff&width=1000" width="1000" alt="DocIntel Banner"/>
 
 <br/>
 
@@ -218,6 +218,6 @@ python server.py
 
 <br/>
 
-![Footer](https://capsule-render.vercel.app/api?type=waving&color=0:6c5ce7,100:a29bfe&height=120&section=footer)
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:6c5ce7,100:a29bfe&height=120&section=footer&width=1000" width="1000" alt="Footer"/>
 
 </div>
