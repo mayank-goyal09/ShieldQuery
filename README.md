@@ -66,3 +66,48 @@ DocIntel is a high-performance **Private-First Retrieval-Augmented Generation (R
 </table>
 
 ---
+
+## 🛠️ **TECHNOLOGY STACK**
+
+<div align="center">
+
+![Tech Stack](https://skillicons.dev/icons?i=python,fastapi,github,vscode,docker)
+
+</div>
+
+| **Category** | **Technologies** | **Role in Ecosystem** |
+|:------------:|:-----------------|:------------|
+| 🐍 **Core Engine** | Python 3.10+ | Backbone of the RAG pipeline |
+| 🧠 **LLM Orchestration** | LangChain / Groq | Managing LLM completions & retrieval logic |
+| 🗄️ **Vector Store** | FAISS | High-speed semantic similarity search |
+| 🔢 **Embedding Model** | all-MiniLM-L6-v2 | Locally converting text to high-dimensional vectors |
+| 📄 **Structured Parsing** | PyMuPDF (fitz) | Layout-aware text extraction with formatting detection |
+| 🎨 **UI Engineering** | Streamlit / FastAPI | Delivering a premium dashboard and API layer |
+| 🚀 **Performance** | Singleton Cache | Optimizing model load & response latency |
+
+---
+
+## 🔬 **THE KNOWLEDGE VAULT WORKFLOW**
+
+```mermaid
+graph TD
+    A[📂 Upload PDF] --> B[📄 Layout-Aware Extraction]
+    B --> C{🔍 Formatting Check}
+    C -->|Title/Heading| D[🏷️ Structural Marker Injection]
+    C -->|Paragraph| E[📝 Raw Text Extraction]
+    D --> F[🧩 Recursive Chunking]
+    E --> F
+    F --> G[🔢 Local Embeddings]
+    G --> H[📦 FAISS Vector Store]
+    H --> I[🛡️ Knowledge Vault]
+    
+    J[👤 User Query] --> K[🔎 Semantic Search]
+    I --> K
+    K --> L[🧠 LLM Context Injection]
+    L --> M[✅ Hallucination-Free Answer]
+    
+    style I fill:#6c5ce7,color:#fff,stroke:#a29bfe,stroke-width:2px
+    style M fill:#00cec9,color:#000,stroke:#fff,stroke-width:2px
+```
+
+---
