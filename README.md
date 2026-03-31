@@ -200,3 +200,23 @@ python server.py
 5. **Verify**: Check the **Source Tag** below each response to see exactly where the information came from.
 
 ---
+
+## 👨‍💻 **CONNECT WITH ME**
+
+<div align="center">
+
+[![GitHub](https://img.shields.io/badge/GitHub-mayank--goyal09-181717?style=for-the-badge&logo=github)](https://github.com/mayank-goyal09)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Mayank_Goyal-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/mayank-goyal-4b8756363/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit_Site-6c5ce7?style=for-the-badge&logo=googlechrome&logoColor=white)](https://mayank-portfolio-delta.vercel.app/)
+
+<br/>
+
+**Mayank Goyal**  
+📊 AI Engineer | 🧠 RAG Architect | 🐍 Python Developer  
+*"Turning static data into living intelligence."* 🔍✨
+
+<br/>
+
+![Footer](https://capsule-render.vercel.app/api?type=waving&color=0:6c5ce7,100:a29bfe&height=120&section=footer)
+
+</div>
