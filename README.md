@@ -138,3 +138,65 @@ AI models tend to "fill the gaps" when they can't find specific answers in the d
 <table>
 <tr>
 <td width="50%">
+
+#### 🛡️ **Sidebar Intelligence**
+- **Document Center**: Multi-file management.
+- **System Status**: Real-time ready/waiting indicators.
+- **Dynamic Stats**: Counters for pages, chunks, and files analyzed.
+- **Topic Cards**: Auto-extracted insights using LLM summarization.
+
+</td>
+<td width="50%">
+
+#### 💬 **AI Interaction**
+- **Glassmorphism Chat**: Sleeker, more readable message bubbles.
+- **Source Attribution**: Every answer shows the exact source file used.
+- **Latency Tracking**: Real-time response time indicators.
+- **Suggestion Chips**: Quick-start prompts for common tasks.
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🚀 **QUICK START GUIDE**
+
+### **Step 1: Clone the Repository** 📥
+
+```bash
+git clone https://github.com/mayank-goyal09/project-55-private-hr-rag.git
+cd project-55-private-hr-rag
+```
+
+### **Step 2: Initialize Environment** 🔑
+
+Create a `.env` file in the root directory:
+```env
+GROQ_API_KEY=your_groq_api_key_here
+```
+
+### **Step 3: Setup & Launch** 🎯
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Option A: Launch Premium Streamlit UI
+streamlit run app.py
+
+# Option B: Launch FastAPI Backend
+python server.py
+```
+
+---
+
+## 🎭 **HOW TO USE**
+
+1. **Upload**: Drop any PDF into the **Document Center** in the sidebar.
+2. **Observe**: Watch the **System Status** turn green as the document is chunked and embedded locally.
+3. **Analyze**: Review the **Key Topics Detected** cards to understand what the AI has indexed.
+4. **Query**: Ask specific questions in the chat—from "What is the policy on overtime?" to "Find the deadline in this contract."
+5. **Verify**: Check the **Source Tag** below each response to see exactly where the information came from.
+
+---
